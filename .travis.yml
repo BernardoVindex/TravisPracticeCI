@@ -9,8 +9,15 @@ cache:
     depth: 3
   script:
     - yarn build
+  notifications:
+    email: 
+      recipients:
+       - cabrerabaldera@gmail.com
+       on_success: always
+       on_failure: always
   deploy:
     provider: pages
+    edge: true
     skip-cleanup: true
     keep-history: true
     github-token: $GITHUB_TOKEN
