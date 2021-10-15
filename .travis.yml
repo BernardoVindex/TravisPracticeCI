@@ -22,7 +22,7 @@ cache:
     keep-history: true
     github-token: $GITHUB_TOKEN
     local-dir: dist/
-    target-branch: gh-pages
+    target-brach: gh-pages
     commit-message: "Deploy del proyecto"
     on:
       branch: main
