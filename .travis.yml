@@ -3,26 +3,26 @@ cache:
   directories:
     - node_modules
     - ~/.npm
-  node_js:
-    - '12'
-  git:
-    depth: 3
-  script:
-    - yarn build
-  notifications:
-    email: 
-      recipients:
-       - cabrerabaldera@gmail.com
-       on_success: always
-       on_failure: always
-  deploy:
-    provider: pages
-    edge: true
-    skip-cleanup: true
-    keep-history: true
-    github-token: $GITHUB_TOKEN
-    local-dir: dist/
-    target-brach: gh-pages
-    commit-message: "Deploy del proyecto"
-    on:
-      branch: main
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarn build
+notifications:
+  email: 
+    recipients:
+      - cabrerabaldera@gmail.com
+      on_success: always
+      on_failure: always
+deploy:
+  provider: pages
+  edge: true
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: main
