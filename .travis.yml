@@ -12,9 +12,9 @@ script:
 notifications:
   email:
     recipients:
-     - cabrerabaldera@gmail.com
-     on_success: always
-     on_failure: always
+      - cabrerabaldera@gmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   edge: true
